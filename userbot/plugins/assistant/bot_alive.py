@@ -12,10 +12,8 @@ pm_caption += "➥ **Database Status:**  `Functional`\n"
 pm_caption += "➥ **Current Branch** : `master`\n"
 pm_caption += f"➥ **Version** : `1.0`\n"
 pm_caption += f"➥ **My Boss** : {DEFAULTUSER} \n"
-pm_caption += "➥ **Heroku Database** : `AWS - Working Properly`\n\n"
-pm_caption += "➥ **License** : [GNU General Public License v3.0](github.com/DARK-COBRA/DARKCOBRA/blob/master/LICENSE)\n"
 pm_caption += "➥ **Copyright** : By [INTENSE BOTS](https://t.me/intense_bots)\n"
-pm_caption += "[Assistant of Nova userbot](https://t.me/Dark_cobra_support_group)"
+pm_caption += "[Assistant of Nova userbot](https://t.me/Nova_ub_support)"
 
 # only Owner Can Use it
 @tgbot.on(events.NewMessage(pattern="^/alive", func=lambda e: e.sender_id == bot.uid))
