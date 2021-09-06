@@ -3,7 +3,7 @@ from telethon.sync import TelegramClient
 
 print("")
 print("")
-print(""" Welcome To String Generator By Jarvis""")
+print(""" Welcome To Nova userbot String Generator...""")
 print("""Kindly Enter Your Details To Continue ! """)
 
 API_KEY = "1754367"
@@ -22,7 +22,7 @@ while True:
             )
             print("Store it safe !!")
             print(
-                "Thanks For Choosing JARVIS Service. Hope that You will Have a Goodtime With Us!....."
+                "Thanks For Choosing NOVA USERNOT. Hope that You will Have a Goodtime With Us!....."
             )
     except BaseException:
         print("")
