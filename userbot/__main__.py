@@ -31,7 +31,7 @@ else:
         print("Initialised Sucessfully")
         print("Starting Dark AI")
         bot.loop.run_until_complete(add_bot(Var.TG_BOT_USER_NAME_BF_HER))
-        print("Startup Completed")
+        print("Startup Completed.....")
     else:
         bot.start()
 
@@ -64,9 +64,9 @@ if LOAD_ASSISTANT == True:
             except Exception as er:
                 print(er)
 else:
-    print("Assitant is Not Loading As U Have Disabled")
+    print("Assitant is Not Loading As U Have Disabled...")
 
-print("DARK COBRA userbot AND YOUR ASSISTANT is Active Enjoy Join @DarkCobra_Support For Updates.")
+print("Nova userbot AND YOUR ASSISTANT is Active Enjoy Join @Nova_ub_support For Updates.")
 
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
