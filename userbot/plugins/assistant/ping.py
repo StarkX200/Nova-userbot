@@ -1,8 +1,3 @@
-# Copyright (C) Midhun KM
-#
-# Please Don't Kang Without Credits
-# A Plugin For Assistant Bot
-# x0x
 
 import time
 from datetime import datetime
