@@ -1,3 +1,3 @@
 build: 
   docker:
-      nova: Dockerfile
+      novauserbot: Dockerfile
