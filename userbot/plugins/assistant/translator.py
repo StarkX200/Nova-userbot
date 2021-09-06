@@ -1,8 +1,4 @@
-# Copyright (C) Midhun KM
-#
-# Please Don't Kang Without Credits
-# A Plugin For Assistant Bot
-# x0x
+
 
 import emoji
 from googletrans import Translator
