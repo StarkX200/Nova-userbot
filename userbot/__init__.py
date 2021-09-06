@@ -1,70 +1,60 @@
-import asyncio
-import logging
+import time
 import os
 import sys
-import time
-from distutils.util import strtobool as sb
-from logging import DEBUG, INFO, basicConfig, getLogger
-import pylast
-from dotenv import load_dotenv
-from nospamplus.connect import Connect
-from pylast import LastFMNetwork, md5
-from pySmartDL import SmartDL
-from requests import get
-from telethon import TelegramClient
 from telethon.sessions import StringSession
-from jarvis.jconfig import Config
+from telethon import TelegramClient
+from userbot.helper import functions as darkdef
 from var import Var
+from userbot.functions import dcfunction as topfunc
 
 
-Lastupdate = time.time()
-sedprint = logging.getLogger("WARNING")
+os.system("pip3 install aria2p")
 
-os.system("pip install --upgrade pip")
 if Var.STRING_SESSION:
     session_name = str(Var.STRING_SESSION)
-    jarvisub = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
+    bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
 else:
-    jarvisub = TelegramClient("TG_BOT_TOKEN", api_id=Var.APP_ID, api_hash=Var.API_HASH).start(bot_token=Var.TG_BOT_TOKEN_BF_HER)
+    session_name = "startup"
+    bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
 
+Lastupdate = time.time()
 CMD_LIST = {}
-# for later purposes
 CMD_HELP = {}
 INT_PLUG = ""
 LOAD_PLUG = {}
 
 # PaperPlaneExtended Support Vars
 ENV = os.environ.get("ENV", False)
+
+CAT_ID = ["1289422521"]
+
 """ PPE initialization. """
 
-import asyncio
+from logging import basicConfig, getLogger, INFO, DEBUG
 from distutils.util import strtobool as sb
-from logging import DEBUG, INFO, basicConfig, getLogger
+import asyncio
 
 import pylast
 from pySmartDL import SmartDL
 from requests import get
-
 # Bot Logs setup:
 if bool(ENV):
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 
     if CONSOLE_LOGGER_VERBOSE:
         basicConfig(
-            format="%(name)s - %(levelname)s - %(message)s",
+            format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
             level=DEBUG,
         )
     else:
-        basicConfig(
-            format="%(name)s - %(levelname)s - %(message)s", level=INFO
-        )
+        basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+                    level=INFO)
     LOGS = getLogger(__name__)
 
     # Check if the config was edited by using the already used variable.
     # Basically, its the 'virginity check' for the config file ;)
     CONFIG_CHECK = os.environ.get(
-        "___________PLOX_______REMOVE_____THIS_____LINE__________", None
-    )
+        "___________PLOX_______REMOVE_____THIS_____LINE__________", None)
 
     if CONFIG_CHECK:
         LOGS.info(
@@ -80,11 +70,11 @@ if bool(ENV):
         pass
 
     # Userbot logging feature switch.
-    BOTLOG = sb(os.environ.get("BOTLOG", "True"))
-    LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "True"))
-
+    BOTLOG = sb(os.environ.get("BOTLOG", "False"))
+    LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
+    
     # Bleep Blop, this is a bot ;)
-    PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "True"))
+    PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 
     # Console verbose logging
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -113,56 +103,35 @@ if bool(ENV):
     # FedBan Premium Module
     F_BAN_LOGGER_GROUP = os.environ.get("F_BAN_LOGGER_GROUP", None)
 
-    # Autopic
-    AUTOPIC_FONT_COLOUR = os.environ.get("AUTOPIC_FONT_COLOUR", None)
-    AUTOPIC_FONT = os.environ.get("AUTOPIC_FONT", None)
-    AUTOPIC_COMMENT = os.environ.get("AUTOPIC_COMMENT", None)
-
-    # Cbutton
-    PRIVATE_CHANNEL_BOT_API_ID = os.environ.get("PRIVATE_CHANNEL_BOT_API_ID", None)
-
-    # SUDOUSERS
-    SUDO_USERS = os.environ.get("SUDO_USERS", None)
-
-    # CommandHandler
-    CMD_HNDLR = os.environ.get("CMD_HNDLR", ".")
-    SUDO_HNDLR = os.environ.get("SUDO_HNDLR", "!")
-
-    # Heroku Credentials for updater.
+# Heroku Credentials for updater.
     HEROKU_MEMEZ = sb(os.environ.get("HEROKU_MEMEZ", "False"))
     HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
 
+   
     # Youtube API key
     YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
     # Default .alive name
     ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
     AUTONAME = os.environ.get("AUTONAME", None)
+    REDIRECTCHANNEL = os.environ.get("REDIRECTCHANNEL", None)
 
     # Time & Date - Country and Time Zone
     COUNTRY = str(os.environ.get("COUNTRY", "India"))
 
     TZ_NUMBER = int(os.environ.get("TZ_NUMBER", 1))
-    FBAN_REASON = os.environ.get("FBAN_REASON", None)
-    FBAN_USER = os.environ.get("FBAN_USER", None)
-    # Clean Welcome
 
     # Clean Welcome
     CLEAN_WELCOME = sb(os.environ.get("CLEAN_WELCOME", "True"))
-
+    
     # Custom Module
-    CUSTOM_STICKER_PACK_NAME = os.environ.get("CUSTOM_STICKER_PACK_NAME", None)
-    CUSTOM_ANIMATED_PACK_NAME = os.environ.get("CUSTOM_ANIMATED_PACK_NAME", None)
-
-    # Pm Permit Img
-    PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
-
-    # Gban
-    USER_IS = os.environ.get("USER_IS", None)
-
-    # For Bot Purposes
-    OWNER_ID = os.environ.get("OWNER_ID", None)
+    CUSTOM_PMPERMIT = os.environ.get("CUSTOM_PMPERMIT", None)
+    
+    # Upstream Repo
+    UPSTREAM_REPO_URL = os.environ.get(
+    "UPSTREAM_REPO_URL",
+    "https://github.com/StarkX200/novauserbot.git")
 
     # Last.fm Module
     BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -174,12 +143,10 @@ if bool(ENV):
     LASTFM_PASSWORD_PLAIN = os.environ.get("LASTFM_PASSWORD", None)
     LASTFM_PASS = pylast.md5(LASTFM_PASSWORD_PLAIN)
     if not LASTFM_USERNAME == "None":
-        lastfm = pylast.LastFMNetwork(
-            api_key=LASTFM_API,
-            api_secret=LASTFM_SECRET,
-            username=LASTFM_USERNAME,
-            password_hash=LASTFM_PASS,
-        )
+        lastfm = pylast.LastFMNetwork(api_key=LASTFM_API,
+                                      api_secret=LASTFM_SECRET,
+                                      username=LASTFM_USERNAME,
+                                      password_hash=LASTFM_PASS)
     else:
         lastfm = None
 
@@ -188,19 +155,22 @@ if bool(ENV):
     G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", None)
     G_DRIVE_AUTH_TOKEN_DATA = os.environ.get("G_DRIVE_AUTH_TOKEN_DATA", None)
     GDRIVE_FOLDER_ID = os.environ.get("GDRIVE_FOLDER_ID", None)
-    TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./downloads")
+    TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY",
+                                         "./downloads")
 else:
     # Put your ppe vars here if you are using local hosting
     PLACEHOLDER = None
 
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
 # and giving them correct perms to work properly.
-if not os.path.exists("bin"):
-    os.mkdir("bin")
+if not os.path.exists('bin'):
+    os.mkdir('bin')
 
 binaries = {
-    "https://raw.githubusercontent.com/yshalsager/megadown/master/megadown": "bin/megadown",
-    "https://raw.githubusercontent.com/yshalsager/cmrudl.py/master/cmrudl.py": "bin/cmrudl",
+    "https://raw.githubusercontent.com/yshalsager/megadown/master/megadown":
+    "bin/megadown",
+    "https://raw.githubusercontent.com/yshalsager/cmrudl.py/master/cmrudl.py":
+    "bin/cmrudl"
 }
 
 for binary, path in binaries.items():
@@ -209,23 +179,12 @@ for binary, path in binaries.items():
     os.chmod(path, 0o755)
 
 # Global Variables
+
 COUNT_MSG = 0
 USERS = {}
 COUNT_PM = {}
 LASTMSG = {}
+SUDO_LIST = {}
 CMD_HELP = {}
 ISAFK = False
 AFKREASON = None
-
-# AntispamINC Client
-
-if Config.NOSPAM_TOKEN == None:
-    sclient = None
-    sedprint.info("[Warning] - NoSpam + is None")
-else:
-    try:
-        sclient = Connect(Config.NOSPAM_TOKEN)
-    except Exception as e:
-        sclient = None
-        sedprint.info("[Warning] - " + e)
-        sed.info("NoSpam+ Client Failed to Start \nReason : " + e)
