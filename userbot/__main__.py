@@ -66,7 +66,7 @@ if LOAD_ASSISTANT == True:
 else:
     print("Assitant is Not Loading As U Have Disabled...")
 
-print("Nova userbot AND YOUR ASSISTANT is Active Enjoy Join @Nova_ub_support For Updates.")
+print("TSF userbot AND YOUR ASSISTANT is Active Enjoy Join @TSF_SUPPORT For Updates.")
 
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
