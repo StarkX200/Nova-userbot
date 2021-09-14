@@ -1,7 +1,7 @@
 {
-  "name": "Nova userbot",
-  "description": "The best and most awaited userbot made by hellboi_atul and modified by Jarvis userbot's owner(@Sppidy) Made with ❤ For Support Join @Dark_cobra_support ",
-  "logo": "https://telegra.ph/file/00f47c54ceda3944dc47c.jpg ",
+  "name": "Tsf userbot",
+  "description": "The best and userbot Made with ❤ For Support Join @tsf_support ",
+  "logo": "https://telegra.ph/file/fc22c880e9b4c74b9f33f.jpg",
     "keywords": [
     "telegram",
     "userbot",
@@ -9,9 +9,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/StarkX200/NOVA-USERBOT/",
-  "website": "https://github.com/StarkX200/NOVA-USERBOT/",
-  "success_url": "https://t.me/Nova_ub",
+  "repository": "https://github.com/StarkX200/Tsf-userbot/",
+  "website": "https://github.com/StarkX200/Tsf-userbot/",
+  "success_url": "https://t.me/tsf-support",
   "stack": "container",
   "env": {
     "ENV": {
@@ -46,7 +46,7 @@
     },
     "ALIVE_PHOTTO": {
       "description": "Let it be what it is(skip)..or you can change the link according to your convince..this link is useful for `.awake` command.",
-      "value": "https://telegra.ph/file/0d0fafe17acca1c51b42d.jpg",
+      "value": "https://telegra.ph/file/fc22c880e9b4c74b9f33f.jpg",
       "required": true
     },
     "DEFAULT_BIO": {
@@ -56,7 +56,7 @@
     },
     "PMPERMIT_PIC": {
       "description": "put here any telegraph media link for pmpermit custom pic.",
-      "value": "https://telegra.ph/file/ad8430d78a8e1adb3d8ea.jpg",
+      "value": "",
       "required": true
     },
     "PM_PERMIT_GROUP_ID": {
@@ -189,7 +189,7 @@
     },
     "EMOJI_TO_DISPLAY_IN_HELP": {
       "description": "Set The emojies You Want to Add In Help Command You Can Add Multiple Emojies too!!",
-      "value": "📨",
+      "value": "⚡",
       "required": true
     },
     "SUDO_USERS": {
