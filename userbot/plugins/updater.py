@@ -1,7 +1,4 @@
-#"""Update UserBot Code (FOR DARKCOBRA USERBOT)
-#Syntax: .update
-#\nAll Credits goes to © @hellboi_atul
-#\nFor this awasome plugin.\nPorted from PpaperPlane Extended"""
+
 from telethon import events
 from os import remove, execle, path, makedirs, getenv, environ, execl
 from shutil import rmtree
@@ -12,7 +9,7 @@ from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 from userbot import CMD_HELP, bot
 from userbot.utils import admin_cmd, sudo_cmd
 
-UPSTREAM_REPO_URL = "https://github.com/StarkX200/Nova-userbot"
+UPSTREAM_REPO_URL = "https://github.com/StarkX200/Tsf-userbot"
 HEROKU_API_KEY = Var.HEROKU_API_KEY
 HEROKU_APP_NAME = Var.HEROKU_APP_NAME
 
@@ -149,7 +146,7 @@ async def upstream(ups):
             await asyncio.sleep(1)
             await ups.edit("`⬛⬛⬛⬛ \n⬛❇️❇️⬛ \n⬛❇️❇️⬛ \n⬛⬛⬛⬛`")
             await asyncio.sleep(1)
-        await ups.edit("`⚜️Updating DarkCobra⚜️\n\nYou are the 👑KING👑 Boss!!\n\nPlease wait 5min😁😁\nThen try .alive to check` 😎😎\n\n**Powered by :-**\n©DARK_COBRA_SUPPORT ")
+        await ups.edit("`⚜️Updating Tsfub⚜️\n\nYou are the 👑KING👑 Boss!!\n\nPlease wait 5min😁😁\nThen try .alive to check` 😎😎\n\n**Powered by :-**\n©Tsf gang ")
         remote.push(refspec="HEAD:refs/heads/master", force=True)
     else:
         try:
