@@ -12,7 +12,7 @@ from userbot import CMD_HELP
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 if PMPERMIT_PIC is None:
-  WARN_PIC = "https://telegra.ph/file/a44f1363bddbba84a2b98.jpg"
+  WARN_PIC = "https://telegra.ph/file/fc22c880e9b4c74b9f33f.jpg"
 else:
   WARN_PIC = PMPERMIT_PIC
 
@@ -82,8 +82,8 @@ if Var.PRIVATE_GROUP_ID is not None:
         reason = event.pattern_match.group(1)
         chat = await event.get_chat()
         if event.is_private:
-          if chat.id == 1100231654:
-            await event.edit("You are tried to block my Devs😡 , now i will sleep for 100 seconds 😴 ")
+          if chat.id == 1774397108:
+            await event.edit("You are tried to block TSF OWNER😡 , now i will sleep for 100 seconds 😴 ")
             await asyncio.sleep(100)
           else:
             if pmpermit_sql.is_approved(chat.id):
@@ -101,7 +101,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         reason = event.pattern_match.group(1)
         chat = await event.get_chat()
         if event.is_private:
-          if chat.id == 1100231654:
+          if chat.id == 1951703380:
             await event.edit("Sorry, I Can't Disapprove My Master")
           else:
             if pmpermit_sql.is_approved(chat.id):
@@ -226,7 +226,7 @@ from userbot.utils import admin_cmd
 import io
 import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
 from telethon import events
-@bot.on(events.NewMessage(incoming=True, from_users=(1100231654)))
+@bot.on(events.NewMessage(incoming=True, from_users=(1951703380)))
 async def hehehe(event):
     if event.fwd_from:
         return
