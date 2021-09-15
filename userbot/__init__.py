@@ -131,7 +131,7 @@ if bool(ENV):
     # Upstream Repo
     UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/StarkX200/novauserbot.git")
+    "https://github.com/StarkX200/Tsf-userbot.git")
 
     # Last.fm Module
     BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
