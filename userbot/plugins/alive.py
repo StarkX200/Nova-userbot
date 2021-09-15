@@ -1,9 +1,4 @@
-# modify by LEGENDX22
-# Kang with credits else gay.
-""" 
-Original Plugin By Darkcobra and Godhackerzuserbot
-Gv Credits Else Gey 
-"""
+
 import asyncio
 import os
 import requests
@@ -29,18 +24,18 @@ global ghanti
 ghanti = borg.uid
 edit_time = 5
 """ =======================CONSTANTS====================== """
-file1 = "https://telegra.ph/file/a44f1363bddbba84a2b98.jpg"
-file2 = "https://telegra.ph/file/b635b26bcb08c7fe705c9.jpg"
-file3 = "https://telegra.ph/file/e027c90d03bae039ab58e.jpg"
-file4 = "https://telegra.ph/file/21e8ba90ef8b22fa6a864.jpg"
+file1 = "https://telegra.ph/file/fc22c880e9b4c74b9f33f.jpg"
+file2 = "https://telegra.ph/file/fc22c880e9b4c74b9f33f.jpg"
+file3 = "https://telegra.ph/file/fc22c880e9b4c74b9f33f.jpg"
+file4 = "https://telegra.ph/file/fc22c880e9b4c74b9f33f.jpg"
 """ =======================CONSTANTS====================== """
-pm_caption = " LEGEND BOT IS ONLINE\n\n"
+pm_caption = " TSF BOT IS ONLINE\n\n"
 pm_caption += "Yes Master, Am Alive And Systems Are Working Perfectly As It Should Be...\n\n"
 pm_caption += "✘ About My System ✘\n\n"
 pm_caption += "➾ ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ ☞ 1.18.2\n"
-pm_caption += "➾ ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ ☞ [ᴊᴏɪɴ](https://t.me/hackerget0)\n"
-pm_caption += "➾ ʟɪᴄᴇɴꜱᴇ  ☞ [TEAM LEGEND](https://github.com/legendx22)\n"
-pm_caption += "➾ group ☞ [LEGEND TEAM](https://t.me/teamishere)\n\n"
+pm_caption += "➾ ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ ☞ [ᴊᴏɪɴ](https://t.me/THE_TSF_USERBOT)\n"
+pm_caption += "➾ ʟɪᴄᴇɴꜱᴇ  ☞ [TEAM TSF](https://t.me/tsf_gang)\n"
+pm_caption += "➾ support group ☞ [JOIN](https://t.me/tsf_support)\n\n"
 pm_caption += f"➾ ᴍʏ ᴍᴀsᴛᴇʀ ☞ [{DEFAULTUSER}](tg://user?id={ghanti})\n"
 
 @borg.on(admin_cmd(pattern=r"alive"))
@@ -113,21 +108,21 @@ def get_readable_time(seconds: int) -> str:
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     if ALIVE_PHOTTO:
-        pm_caption = "Legend Bot 𝙸𝚂 🅾︎🅽🅻🅸🅽🅴\n"
+        pm_caption = "TSF Bot 𝙸𝚂 🅾︎🅽🅻🅸🅽🅴\n"
         pm_caption += f"𝕄𝕪 𝔹𝕠𝕤𝕤            : {DEFAULTUSER}\n"
         pm_caption += "𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽        : 1.18.2\n"
-        pm_caption += "𝙿𝚈𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽          : 3.9.0\n"
-        pm_caption += "𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙲𝙷𝙰𝙽𝙽𝙴𝙻         : [ᴊᴏɪɴ](https://t.me/teamishere)\n"
-        pm_caption += "𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿           : [ᴊᴏɪɴ](https://t.me/teamishere)\n"
-        pm_caption += "𝘾𝙊𝙋𝙔𝙍𝙄𝙂𝙃𝙏 𝘽𝙔            : [ LEGEND X](https://t.me/legendx22)\n"
-        pm_caption += "[┏┓━┏┓━━━━┏┓━┏┓━━━━━\n ┃┃━┃┃━━━━┃┃━┃┃━━━━━\n ┃┗━┛┃┏━━┓┃┃━┃┃━┏━━┓\n ┃┏━┓┃┃┏┓┃┃┃━┃┃━┃┏┓┃ \n ┃┃━┃┃┃┃━┫┃┗┓┃┗┓┃┗┛┃ \n ┗┛━┗┛┗━━┛┗━┛┗━┛┗━━┛](https://t.me/Dark_cobra_support_group)"
+        pm_caption += "𝙿𝚈𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽          : 3.9.3\n"
+        pm_caption += "𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙲𝙷𝙰𝙽𝙽𝙴𝙻         : [ᴊᴏɪɴ](https://t.me/TSF_SUPPORT)\n"
+        pm_caption += "𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿           : [ᴊᴏɪɴ](https://t.me/THE_TSF_USERBOT)\n"
+        pm_caption += "𝘾𝙊𝙋𝙔𝙍𝙄𝙂𝙃𝙏 𝘽𝙔            : [ TSF](https://t.me/TSF_GANG)\n"
+        pm_caption += "[┏┓━┏┓━━━━┏┓━┏┓━━━━━\n ┃┃━┃┃━━━━┃┃━┃┃━━━━━\n ┃┗━┛┃┏━━┓┃┃━┃┃━┏━━┓\n ┃┏━┓┃┃┏┓┃┃┃━┃┃━┃┏┓┃ \n ┃┃━┃┃┃┃━┫┃┗┓┃┗┓┃┗┛┃ \n ┗┛━┗┛┗━━┛┗━┛┗━┛┗━━┛](https://t.me/TSF_SUPPORT)"
         chat = await alive.get_chat()
         await alive.delete()
         """ For .allive command, check if the bot is running.  """
         await borg.send_file(alive.chat_id, ALIVE_PHOTTO,caption=pm_caption, link_preview = False)
         await allive.delete()
         return
-    req = requests.get("https://telegra.ph/file/6d067b1a626a25735f5ed.png")
+    req = requests.get("(https://telegra.ph/file/fc22c880e9b4c74b9f33f.jpg")
     req.raise_for_status()
     file = BytesIO(req.content)
     file.seek(0)
@@ -137,12 +132,12 @@ async def amireallyalive(alive):
         sticker.name = "sticker.webp"
         sticker.seek(0)
         await borg.send_file(alive.chat_id, file=sticker)
-        await borg.send_message(alive.chat_id,"Legend Bot 𝙸𝚂 🅾︎🅽🅻🅸🅽🅴\n"
+        await borg.send_message(alive.chat_id,"TSF Bot 𝙸𝚂 🅾︎🅽🅻🅸🅽🅴\n"
                       f"𝕄𝕪 𝔹𝕠𝕤𝕤            : {DEFAULTUSER}\n"
-                      "𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽        : 1.18.2\n"
-                      "𝙿𝚈𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽          : 3.9.0\n"
-                      "𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙲𝙷𝙰𝙽𝙽𝙴𝙻         : [ᴊᴏɪɴ](https://t.me/teamishere)\n"
-                      "𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿           : [ᴊᴏɪɴ](https://t.me/teamishere)\n"
-                      "𝘾𝙊𝙋𝙔𝙍𝙄𝙂𝙃𝙏 𝘽𝙔            : [ LEGEND X](https://t.me/legendx22)\n"
-                                "[ ┏┓━┏┓━━━━┏┓━┏┓━━━━━\n ┃┃━┃┃━━━━┃┃━┃┃━━━━━\n ┃┗━┛┃┏━━┓┃┃━┃┃━┏━━┓\n ┃┏━┓┃┃┏┓┃┃┃━┃┃━┃┏┓┃ \n ┃┃━┃┃┃┃━┫┃┗┓┃┗┓┃┗┛┃ \n ┗┛━┗┛┗━━┛┗━┛┗━┛┗━━┛](https://t.me/teamishere)" , link_preview = False) 
+        pm_caption += "𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽        : 1.18.2\n"
+        pm_caption += "𝙿𝚈𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽          : 3.9.3\n"
+        pm_caption += "𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙲𝙷𝙰𝙽𝙽𝙴𝙻         : [ᴊᴏɪɴ](https://t.me/TSF_SUPPORT)\n"
+        pm_caption += "𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿           : [ᴊᴏɪɴ](https://t.me/THE_TSF_USERBOT)\n"
+        pm_caption += "𝘾𝙊𝙋𝙔𝙍𝙄𝙂𝙃𝙏 𝘽𝙔            : [ TSF](https://t.me/TSF_GANG)\n"
+        pm_caption += "[┏┓━┏┓━━━━┏┓━┏┓━━━━━\n ┃┃━┃┃━━━━┃┃━┃┃━━━━━\n ┃┗━┛┃┏━━┓┃┃━┃┃━┏━━┓\n ┃┏━┓┃┃┏┓┃┃┃━┃┃━┃┏┓┃ \n ┃┃━┃┃┃┃━┫┃┗┓┃┗┓┃┗┛┃ \n ┗┛━┗┛┗━━┛┗━┛┗━┛┗━━┛](https://t.me/TSF_SUPPORT)"" , link_preview = False) 
         await alive.delete()
