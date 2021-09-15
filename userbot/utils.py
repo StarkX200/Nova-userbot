@@ -1,3 +1,4 @@
+
 from userbot import bot
 from telethon import events
 from pathlib import Path
@@ -555,4 +556,3 @@ def start_assistant(shortname):
         spec.loader.exec_module(mod)
         sys.modules["userbot.plugins.assistant" + shortname] = mod
         print("Assistant Has imported " + shortname)        
-
