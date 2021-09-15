@@ -3,7 +3,7 @@ import subprocess
 from logging import DEBUG, INFO, basicConfig, getLogger, warning
 basicConfig(format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s", level=INFO)
 LOGS = getLogger("Helper")
-os.system("git clone https://github.com/StarkX200/Ysf-userbot tsfuserbot")
+os.system("git clone https://github.com/StarkX200/tsf-userbot tsfuserbot")
 os.chdir("tsfuserbot")
 process = subprocess.Popen(
         ["python3", "-m", "userbot"],
