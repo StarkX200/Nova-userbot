@@ -1,5 +1,5 @@
 from userbot import simpdef
-from ..helper import functions as legend
+from ..helper import functions as tsf
 
 
 simpmusic = simpdef.simpmusic 
